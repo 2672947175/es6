@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>点名表</title>
+    <style>
+        *{
+            margin:0;
+            padding: 0;
+            list-style: none;
+        }
+        .conbox{
+            width: 1000px;
+            background: pink;
+            margin:60px auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .btn{
+            width: 200px;
+            line-height: 50px;
+            display: block;
+            margin: 20px auto;
+        }
+        .ul{
+            width: 100%;
+        }
+        .clear:after{display:block;clear:both;content:"";visibility:hidden;height:0}
+        li{
+            width: 16%;
+            height: 60px;
+           line-height: 60px;
+            margin: 2%;
+            float: left;
+            background: red;
+            color: #fff;
+            text-align:center;
+            position: relative;
+        }
+        .on{
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top:0;
+            left: 0;
+            background: rgba(000, 000,000, 0.5);
+        }
+    </style>
+</head>
+<body>
+    <div class="conbox">
+        <ul class="ul clear">
+            
+        </ul>
+        <button class="btn">点击</button>
+    </div>
+</body>
+<script src="dian.js"></script>
+</html>

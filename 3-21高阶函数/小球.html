@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .con {
+            width: 500px;
+            height: 500px;
+            background-color: aqua;
+            margin: 20px auto;
+            /* position: relative; */
+        }
+
+        .con div {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background-color: forestgreen;
+            /* position: absolute;
+             */
+            position: relative;
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="con">
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+</body>
+<script>
+    let con = document.querySelector('.con')
+
+
+    function move(ele, x, callback) {
+        let m = 0;
+        let s = 0
+        let time = setInterval(() => {
+            if (m >= x) {
+                ele.style.left = x + "px";
+                clearInterval(time);
+                callback();
+            } else {
+                m += 5
+                ele.style.left = m + "px";
+            }
+        }, 13);
+
+    }
+    move(con.children[0], 200, function () {
+        move(con.children[1], 300, function () {
+            move(con.children[2], 400, function () {
+            })
+        })
+    })
+</script>
+
+</html>
